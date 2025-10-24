@@ -29,3 +29,7 @@ def predict(data: IrisFeatures):
     ]]
     prediction = model.predict(features)[0]
     return {"prediction": labels[prediction]}
+
+@app.get("/health")
+def health():
+    return {"status":"ok"}
